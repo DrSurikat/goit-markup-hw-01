@@ -104,7 +104,7 @@ img {
 .hero-title {
   font-size: 56px;
   font-weight: 700;
-  line-height: 1.14; /* 64 / 56 */
+  line-height: 1.14;
   margin-bottom: 48px;
 }
 
@@ -113,7 +113,7 @@ img {
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5; /* 24 / 16 */
+  line-height: 1.5;
   padding: 16px 32px;
   border: none;
   border-radius: 4px;
@@ -209,6 +209,66 @@ img {
   color: #434455;
 }
 
+/* ====== PORTFOLIO ====== */
+
+.portfolio-section {
+  padding: 120px 0;
+  background-color: #ffffff;
+}
+
+.portfolio-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.portfolio-card {
+  background-color: #ffffff;
+  border: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  flex-basis: calc((100% - 24px) / 2);
+  transition: box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover,
+.portfolio-card:focus-within {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15), 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-content {
+  padding: 32px 16px;
+}
+
+.portfolio-name {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  color: #2e2f42;
+}
+
+.portfolio-type {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #434455;
+}
+
 /* ====== FOOTER ====== */
 
 .page-footer {
@@ -244,13 +304,15 @@ img {
   .features-list,
   .team-list,
   .contacts-list,
-  .nav-list {
+  .nav-list,
+  .portfolio-list {
     flex-direction: column;
     align-items: center;
   }
 
   .features-list .feature-item,
-  .team-list .team-card {
+  .team-list .team-card,
+  .portfolio-card {
     flex-basis: 100%;
   }
 
