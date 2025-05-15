@@ -52,7 +52,7 @@ img {
   color: #2e2f42;
 }
 
-.header-logo .logo-part {
+.logo-part {
   color: #4d5ae5;
 }
 
@@ -64,14 +64,16 @@ img {
 .nav-link {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.5;
   color: #2e2f42;
 }
 
 .nav-link:hover,
 .nav-link:focus {
   color: #404bbf;
-  outline: none;
+}
+
+.contacts {
+  font-style: normal;
 }
 
 .contacts-list {
@@ -81,15 +83,12 @@ img {
 
 .contacts-link {
   font-size: 14px;
-  line-height: 1.5;
   color: #434455;
 }
 
 .contacts-link:hover,
 .contacts-link:focus {
   color: #404bbf;
-  outline: 2px solid #4d5ae5;
-  outline-offset: 2px;
 }
 
 /* ====== HERO ====== */
@@ -104,7 +103,7 @@ img {
 .hero-title {
   font-size: 56px;
   font-weight: 700;
-  line-height: 1.14;
+  line-height: 64px;
   margin-bottom: 48px;
 }
 
@@ -113,18 +112,17 @@ img {
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 24px;
   padding: 16px 32px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .hero-button:hover,
 .hero-button:focus {
   background-color: #404bbf;
-  outline: 2px solid #ffffff;
-  outline-offset: 2px;
 }
 
 /* ====== FEATURES ====== */
@@ -138,22 +136,22 @@ img {
   display: flex;
   justify-content: space-between;
   gap: 24px;
+  flex-wrap: wrap;
 }
 
 .feature-item {
-  flex-basis: calc((100% - 3 * 24px) / 4);
+  flex-basis: calc((100% - 72px) / 4);
 }
 
 .feature-title {
   font-size: 20px;
   font-weight: 500;
-  line-height: 1.2;
   margin-bottom: 8px;
 }
 
 .feature-text {
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 24px;
   color: #434455;
 }
 
@@ -168,7 +166,6 @@ img {
 .team-title {
   font-size: 36px;
   font-weight: 700;
-  line-height: 1.11;
   margin-bottom: 72px;
 }
 
@@ -186,7 +183,7 @@ img {
     0px 1px 6px rgba(0, 0, 0, 0.08);
   padding-bottom: 32px;
   text-align: center;
-  flex-basis: calc((100% - 3 * 24px) / 4);
+  flex-basis: calc((100% - 72px) / 4);
 }
 
 .team-img {
@@ -199,73 +196,11 @@ img {
 .team-name {
   font-size: 20px;
   font-weight: 500;
-  line-height: 1.2;
   margin-bottom: 8px;
 }
 
 .team-role {
   font-size: 16px;
-  line-height: 1.5;
-  color: #434455;
-}
-
-/* ====== PORTFOLIO ====== */
-
-.portfolio-section {
-  padding: 120px 0;
-  background-color: #ffffff;
-}
-
-.portfolio-title {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.11;
-  text-align: center;
-  margin-bottom: 72px;
-}
-
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
-}
-
-.portfolio-card {
-  background-color: #ffffff;
-  border: 1px solid #e7e9fc;
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-  flex-basis: calc((100% - 24px) / 2);
-  transition: box-shadow 0.3s ease;
-}
-
-.portfolio-card:hover,
-.portfolio-card:focus-within {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15), 0px 2px 2px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.portfolio-content {
-  padding: 32px 16px;
-}
-
-.portfolio-name {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-  margin-bottom: 8px;
-  color: #2e2f42;
-}
-
-.portfolio-type {
-  font-size: 16px;
-  line-height: 1.5;
   color: #434455;
 }
 
@@ -287,38 +222,38 @@ img {
   margin-bottom: 16px;
 }
 
-.footer-logo .logo-part {
-  color: #f4f4fd;
-}
-
 .footer-text {
   max-width: 264px;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 24px;
   color: #f4f4fd;
 }
 
 /* ====== MEDIA QUERIES ====== */
 
+@media screen and (max-width: 1024px) {
+  .feature-item,
+  .team-card {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .features-list,
-  .team-list,
+  .header-container,
   .contacts-list,
   .nav-list,
-  .portfolio-list {
+  .features-list,
+  .team-list {
     flex-direction: column;
     align-items: center;
   }
 
-  .features-list .feature-item,
-  .team-list .team-card,
-  .portfolio-card {
+  .feature-item,
+  .team-card {
     flex-basis: 100%;
   }
 
   .header-container {
-    flex-direction: column;
-    align-items: flex-start;
     gap: 20px;
   }
 }
