@@ -52,7 +52,7 @@ img {
   color: #2e2f42;
 }
 
-.logo-part {
+.header-logo .logo-part {
   color: #4d5ae5;
 }
 
@@ -70,10 +70,13 @@ img {
 .nav-link:hover,
 .nav-link:focus {
   color: #404bbf;
+  outline: none;
 }
 
+/* ====== CONTACTS ====== */
+
 .contacts {
-  font-style: normal;
+  /* font-style: normal — зайве, не додаємо */
 }
 
 .contacts-list {
@@ -89,6 +92,8 @@ img {
 .contacts-link:hover,
 .contacts-link:focus {
   color: #404bbf;
+  outline: 2px solid #4d5ae5;
+  outline-offset: 2px;
 }
 
 /* ====== HERO ====== */
@@ -122,6 +127,8 @@ img {
 .hero-button:hover,
 .hero-button:focus {
   background-color: #404bbf;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
 }
 
 /* ====== FEATURES ====== */
@@ -220,6 +227,10 @@ img {
   margin-bottom: 16px;
 }
 
+.footer-logo .logo-part {
+  color: #f4f4fd;
+}
+
 .footer-text {
   max-width: 264px;
   font-size: 16px;
@@ -227,7 +238,7 @@ img {
   color: #f4f4fd;
 }
 
-/* ====== MEDIA ====== */
+/* ====== MEDIA QUERIES ====== */
 
 @media screen and (max-width: 768px) {
   .features-list,
