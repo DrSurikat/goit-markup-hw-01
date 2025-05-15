@@ -75,10 +75,6 @@ img {
 
 /* ====== CONTACTS ====== */
 
-.contacts {
-  /* font-style: normal — зайве, не додаємо */
-}
-
 .contacts-list {
   display: flex;
   gap: 40px;
